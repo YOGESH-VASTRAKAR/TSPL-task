@@ -1,0 +1,477 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+nav .container-fluid {--bs-gutter-x: 0 rem;}
+
+.nav .container-fluid {
+  --bs-gutter-x: 0;
+}
+
+.navbar img {
+  filter: saturate(0) brightness(0) invert(1);
+}
+.navbar .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar {
+  --bs-navbar-padding-y: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    padding-left: 1rem !important;
+  }
+  .navbar .ps-5,
+  .navbar .pe-5 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .navbar .pt-4,
+  .navbar .pb-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .navbar-nav {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  .navbar-nav .nav-item {
+    text-align: center;
+  }
+  /* Hide the big square block on small screens */
+  .navbar .position-absolute {
+    display: none;
+  }
+}
+
+.my-border{
+  border-color: #fdd3bf!important;
+  
+}
+/* Default styles (desktop) remain unchanged */
+
+/* Large screens - tablets and down */
+@media (max-width: 1200px) {
+  .display-1.responsive-heading {
+    font-size: 9rem !important;
+  }
+  .display-1.responsive-heading span {
+    font-size: 2.75rem !important;
+  }
+}
+
+/* Medium screens - tablets and large phones */
+@media (max-width: 992px) {
+  .display-1.responsive-heading {
+    font-size: 8rem !important;
+  }
+  .display-1.responsive-heading span {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Small screens - phones */
+@media (max-width: 768px) {
+  .display-1.responsive-heading {
+    font-size: 7rem !important;
+  }
+  .display-1.responsive-heading span {
+    font-size: 2.25rem !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .display-1.responsive-heading {
+    font-size: 5rem !important;
+  }
+  .display-1.responsive-heading span {
+    font-size: 2rem !important;
+  }
+}
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .section-text,
+  .section-end {
+    padding-right: 2rem !important;
+    text-align: left !important;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .section-text,
+  .section-end {
+    padding-right: 1rem !important;
+    text-align: left !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .section-text,
+  .section-end {
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+}
+.project-card {
+  width: 260px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+ background: rgb(0 0 0 / 61%); 
+  z-index: 0;
+}
+
+.project-card.highlight::before {
+  background: none;
+}
+
+
+.highlight-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background:#f65000;
+  width: 70px;
+  height: 70px;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.highlight-overlay svg {
+ transform: translate(15px, -15px);
+}
+
+
+.project-type,
+.project-title,
+.nav-arrow {
+  position: relative;
+  z-index: 2;
+}
+
+.project-type {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 0.9rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  text-align: left;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+  color: white;
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-arrow.left {
+  left: 0;
+}
+
+.nav-arrow.right {
+  right: 0;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .project-card {
+    width: 200px;
+    height: 320px;
+  }
+  .project-title {
+    font-size: 0.9rem;
+  }
+  .project-type {
+    font-size: 0.75rem;
+  }
+  .highlight-overlay {
+    width: 60px;
+    height: 60px;
+  }
+  .highlight-overlay svg {
+    transform: translate(10px, -10px);
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .project-card {
+    width: 160px;
+    height: 260px;
+  }
+  .project-title {
+    font-size: 0.85rem;
+  }
+  .project-type {
+    font-size: 0.7rem;
+  }
+  .highlight-overlay {
+    width: 50px;
+    height: 50px;
+  }
+  .highlight-overlay svg {
+    transform: translate(8px, -8px);
+  }
+  .nav-arrow {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+  .project-card {
+    width: 100%;
+    height: 220px;
+  }
+  .project-title {
+    font-size: 0.9rem;
+    bottom: 8px;
+  }
+  .project-type {
+    font-size: 0.75rem;
+    left: 6px;
+    top: 6px;
+  }
+  .highlight-overlay {
+    width: 45px;
+    height: 45px;
+  }
+  .highlight-overlay svg {
+    transform: translate(6px, -6px);
+  }
+  .nav-arrow {
+    font-size: 0.75rem;
+  }
+}
+
+/* Orange box */
+.message-box {
+  background-color: #ff5a00;
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: justify;
+  border-radius: 0;
+  margin-right: 5rem;
+  padding: 2rem 5rem 2rem 10rem !important;
+}
+
+/* Orange speech bubble tail */
+.speech-tail {
+  position: absolute;
+  bottom: -69px;
+  right: 102px;
+  transform: rotate(90deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 80px 0 0 60px;
+  border-color: transparent transparent transparent #ff5a00;
+}
+
+/* Make Africa map scale nicely */
+.africa-map-full {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .africa-map-full {
+    display: none;
+  }
+  .speech-tail {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .message-box {
+    padding: 2rem 3rem 2rem 5rem !important;
+    margin-right: 2rem;
+  }
+  .africa-map-full {
+    display: none;
+  }
+  .speech-tail {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .message-box {
+    padding: 2rem 2rem 2rem 3rem !important;
+    margin-right: 0;
+    text-align: left;
+  }
+  .speech-tail {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .message-box {
+    padding: 1.5rem !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .speech-tail {
+    display: none;
+  }
+  .col-lg-4 {
+    height: auto !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .message-box {
+    padding: 1.25rem !important;
+  }
+  .message-box h2 {
+    font-size: 1.5rem !important;
+  }
+  .message-box p {
+    font-size: 0.95rem;
+  }
+}
+
+.position-text{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.whats-new-bg {
+  font-size: 6rem;
+  color: #f5f5f5;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: -1;
+  font-weight: bold;
+}
+
+.main-news-card {
+  position: relative;
+}
+
+.main-news-date {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  background: #ff5a00;
+  color: white;
+  padding: 4px 10px;
+  font-weight: bold;
+  margin: .2rem;
+  font-size: 0.9rem;
+}
+
+.main-news-title {
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: .5rem;
+  margin: .2rem;
+}
+
+
+.news-date {
+  color: white;
+  background-color: #ff5a00;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.news-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.news-card-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.side-news{
+  height: 160px;
+ 
+}
+
+.bg-orange {
+  background-color: #ff5001; /* match footer background */
+}
+.translate-middle {
+    transform: translate(-30%, -50%) !important;
+    z-index: 3;
+}
