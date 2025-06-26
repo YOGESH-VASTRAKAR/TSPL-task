@@ -1,12 +1,44 @@
-# React + Vite
+# Simba Developer Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern, responsive React website for **Simba Developer**, showcasing projects, services, and company information.  
+It uses **React**, **Bootstrap 5**, and **React Icons** to deliver a clean, professional design.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 https://tspl-simba.netlify.app/
 
-## Expanding the ESLint configuration
+src/
+  components/
+    Navbar.jsx
+    AfricanArt.jsx
+    FeaturedProjects.jsx
+    NewsSection.jsx
+    Partners.jsx
+    Welcome.jsx
+    Header.jsx
+    Footer.jsx
+    ProductQuality.jsx
+  assets/
+    (images and logos)
+  App.js
+  index.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Responsive navbar with transparent and colored sections
+- Hero section with call-to-action
+- Dynamic featured projects grid
+- News and press releases section
+- Modern footer
+- Fully mobile-friendly design
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
